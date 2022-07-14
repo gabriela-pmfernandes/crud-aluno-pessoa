@@ -45,6 +45,22 @@ public class AlunoService {
 	}
 	
 	public void mostrarTodos() {
-		System.out.println(alunos);
+		for(int i = 0; i < alunos.size(); i++) {
+			System.out.println(alunos.get(i));
+		}
+		
+		
 	}
+	
+	public void atualizarAluno(int id) {
+		alunos.removeAll(alunos);
+		
+		
+	}
+	public void excluirDadosAluno(int id) {
+		alunos.remove(id);
+	}
+	
+	
+	
 }

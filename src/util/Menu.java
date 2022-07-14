@@ -23,7 +23,8 @@ public class Menu {
 		System.out.println("1 - Cadastrar uma pessoa");
 		System.out.println("2 - Mostrar pessoas cadastradas");
 		System.out.println("3 - Atualizar dados de uma pessoa");
-		System.out.println("4 - Excluir uma pessoa");
+		System.out.println("4 - Excluir dados de uma pessoa");
+		System.out.println("0 - Sair do cadastro de pessoa");
 	}
 	
 	public static void cadastroAluno() {
@@ -32,6 +33,7 @@ public class Menu {
 		System.out.println("1 - Cadastrar um aluno");
 		System.out.println("2 - Mostrar alunos cadastrados");
 		System.out.println("3 - Atualizar dados de um aluno");
-		System.out.println("4 - Excluir um aluno");
+		System.out.println("4 - Excluir dados de um aluno");
+		System.out.println("0 - Sair do cadastro de aluno");
 	}
 }

@@ -6,34 +6,34 @@ import model.Pessoa;
 
 public class PessoaRepository implements Repository<Pessoa>{
 
-	@Override
-	public List<Pessoa> buscarTodos() {
+	//@Override
+	//public List<Pessoa> buscarTodos() {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		//return null;
+	//}
 
-	@Override
-	public Pessoa buscaPorId(int id) {
+	//@Override
+	//public Pessoa buscaPorId(int id) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+	//	return null;
+	//}
 
-	@Override
-	public void salvar(Pessoa objeto) {
+	//@Override
+	//public void salvar(Pessoa objeto) {
 		// TODO Auto-generated method stub
 		
-	}
+	//}
 
-	@Override
-	public void atualizar(Pessoa objeto) {
+	//@Override
+	//public void atualizar(Pessoa objeto) {
 		// TODO Auto-generated method stub
 		
-	}
+	//}
 
-	@Override
-	public void excluir(int id) {
+	//@Override
+	//public void excluir(int id) {
 		// TODO Auto-generated method stub
 		
-	}
+	//}
 
 }
