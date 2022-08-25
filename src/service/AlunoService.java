@@ -2,6 +2,8 @@ package service;
 
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,7 +34,7 @@ public class AlunoService {
 		int anoNascimento = entrada.nextInt();
 		System.out.println("Digite a nota final do curso: ");
 		Double notaFinalCurso = entrada.nextDouble();
-		Aluno aluno = new Aluno(nome, telefone, diaNascimento, mesNascimento, anoNascimento, notaFinalCurso, LocalDate.now());
+		Aluno aluno = new Aluno(nome, telefone, diaNascimento, mesNascimento, anoNascimento, notaFinalCurso, LocalDateTime.now());
 		aluno.getId();
 		aluno.getNome();
 		aluno.getTelefone();
@@ -49,23 +51,22 @@ public class AlunoService {
 		System.out.println("************ ALUNOS CADASTRADOS ************");
 		for(int i = 0; i < alunos.size(); i++) {
 			Aluno listaAluno = alunos.get(i);
-			System.out.println("Referência: " + "["+ i + "]" + listaAluno);	
+			System.out.println("Referência: " + "["+ i + "] " + listaAluno);	
 		}
 	}
 	
-	public void atualizarAluno(int id) {
+	public void atualizarAluno(int referencia) {
 		for(int i = 0; i < alunos.size(); i++) {
-			
 			Aluno listaAluno = alunos.get(i);
-			
 		}
-		alunos.remove(id);
+		alunos.remove(referencia);
 		cadastrarAluno();
-		
+		System.out.println("Data da última atualização: " + NormalizaData.formata(LocalDateTime.now()));
 	}
-	public void excluirDadosAluno(int id) {
-		for(int i = 0; i < alunos.size(); i++)
-		alunos.remove(id);
+	public void excluirDadosAluno(int referencia) {
+		for(int i = 0; i < alunos.size(); i++) { 
+		}	
+		alunos.remove(referencia);
 	}
 	
 	

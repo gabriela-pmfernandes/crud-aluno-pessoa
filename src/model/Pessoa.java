@@ -1,26 +1,28 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import util.Contador;
+import util.NormalizaData;
 
 public class Pessoa {
 	protected Integer id;
 	protected String nome;
 	protected String telefone;
-	protected Integer diaNascimento;
-	protected Integer mesNascimento;
-	protected Integer anoNascimento;
-	private LocalDate data;
+	protected int diaNascimento;
+	protected int mesNascimento;
+	protected int anoNascimento;
+	private LocalDateTime data;
 	
-	public Pessoa(String nome, String telefone, Integer diaNascimento, Integer mesNascimento, Integer anoNascimento) {
+	public Pessoa(String nome, String telefone, int diaNascimento, int mesNascimento, int anoNascimento) {
 		this.id = Contador.proximoId();
 		this.nome = nome;
 		this.telefone = telefone;
 		this.diaNascimento = diaNascimento;
 		this.mesNascimento = mesNascimento;
 		this.anoNascimento = anoNascimento;
-		this.data = LocalDate.now();
+		this.data = LocalDateTime.now();
 	}
 	
 	public Integer getId() {
@@ -71,18 +73,18 @@ public class Pessoa {
 		this.anoNascimento = anoNascimento;
 	}
 	
-	public LocalDate getData() {
+	public LocalDateTime getData() {
 		return data;
 	}
 
-	public void setData(LocalDate data) {
+	public void setData(LocalDateTime data) {
 		this.data = data;
 	}
 
 	@Override
 	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", telefone=" + telefone + ", diaNascimento=" + diaNascimento
-				+ ", mesNascimento=" + mesNascimento + ", anoNascimento=" + anoNascimento + ", data=" + data + "]";
+		return "Pessoa[Id: " + this.getId() + " Nome: " + this.getNome() + " Telefone: " + this.getTelefone() + " Data de Nascimento: " + this.getDiaNascimento()
+				+ "/"+ this.getMesNascimento() + "/"+ this.getAnoNascimento() + " Data de Cadastro: " + NormalizaData.formata(getData()) + " Data da Última Atualização: "+ NormalizaData.formata(getData())+"]";
 	}
 
 	
