@@ -27,30 +27,30 @@ public class Principal {
 			}else{
 				boolean continuaCadastro = true;
 				
-					Menu.cadastroAluno();
+					
 					do {
+						Menu.cadastroAluno();
 					int opcaoEscolhidaAluno = entrada.nextInt();
 					if(opcaoEscolhidaAluno == 1) {
 						alunoService.cadastrarAluno();
-						Menu.cadastroAluno();
+						//Menu.cadastroAluno();
 					}else if(opcaoEscolhidaAluno == 2) {
 						alunoService.mostrarTodos();
+						//Menu.cadastroAluno();
 					}else if(opcaoEscolhidaAluno == 3) {
 						entrada.nextLine();
-						System.out.println("Escolha o id do aluno que você quer atualizar: ");
+						System.out.println("Escolha o número de referência do aluno que você quer atualizar: ");
 						alunoService.mostrarTodos();
-						int idAlunoEscolhido = entrada.nextInt();
-						alunoService.atualizarAluno(idAlunoEscolhido);
-						//alunoService.excluirDadosAluno(idAlunoEscolhido);
-						alunoService.cadastrarAluno();
-						Menu.cadastroAluno();
+						int referenciaAlunoEscolhido = entrada.nextInt();
+						alunoService.atualizarAluno(referenciaAlunoEscolhido);
+						//Menu.cadastroAluno();
 					}else if(opcaoEscolhidaAluno == 4) {
 						entrada.nextLine();
-						System.out.println("Escolha id do aluno que você quer excluir os dados: ");
+						System.out.println("Escolha o número de referência do aluno que você quer excluir os dados: ");
 						alunoService.mostrarTodos();
-						int idAlunoExcluir = entrada.nextInt();
-						alunoService.excluirDadosAluno(idAlunoExcluir);
-						Menu.cadastroAluno();
+						int referenciaAlunoExcluir = entrada.nextInt();
+						alunoService.excluirDadosAluno(referenciaAlunoExcluir);
+						//Menu.cadastroAluno();
 					}else if(opcaoEscolhidaAluno == 0) {
 						continuaCadastro = false;
 					}

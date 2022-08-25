@@ -15,7 +15,7 @@ public class AlunoService {
 	public AlunoService(Scanner entrada) {
 		this.entrada = entrada;
 	}
-	ArrayList<Object> alunos = new ArrayList<>();
+	ArrayList<Aluno> alunos = new ArrayList<>();
 	
 	public void cadastrarAluno() {
 		entrada.nextLine();
@@ -32,32 +32,39 @@ public class AlunoService {
 		int anoNascimento = entrada.nextInt();
 		System.out.println("Digite a nota final do curso: ");
 		Double notaFinalCurso = entrada.nextDouble();
+		Aluno aluno = new Aluno(nome, telefone, diaNascimento, mesNascimento, anoNascimento, notaFinalCurso, LocalDate.now());
+		aluno.getId();
+		aluno.getNome();
+		aluno.getTelefone();
+		aluno.getDiaNascimento();
+		aluno.getMesNascimento();
+		aluno.getAnoNascimento();
+		aluno.getNotaFinalCurso();
+		aluno.getData();
 		
-		
-		alunos.add(Contador.proximoId());
-		alunos.add(nome);
-		alunos.add(telefone);
-		alunos.add(diaNascimento);
-		alunos.add(mesNascimento);
-		alunos.add(anoNascimento);
-		alunos.add(notaFinalCurso);
-		alunos.add(NormalizaData.formata(LocalDate.now()));
+		alunos.add(aluno);
 	}
 	
 	public void mostrarTodos() {
+		System.out.println("************ ALUNOS CADASTRADOS ************");
 		for(int i = 0; i < alunos.size(); i++) {
-			System.out.println(alunos.get(i));
+			Aluno listaAluno = alunos.get(i);
+			System.out.println("Referência: " + "["+ i + "]" + listaAluno);	
 		}
-		
-		
 	}
 	
 	public void atualizarAluno(int id) {
-		alunos.removeAll(alunos);
-		
+		for(int i = 0; i < alunos.size(); i++) {
+			
+			Aluno listaAluno = alunos.get(i);
+			
+		}
+		alunos.remove(id);
+		cadastrarAluno();
 		
 	}
 	public void excluirDadosAluno(int id) {
+		for(int i = 0; i < alunos.size(); i++)
 		alunos.remove(id);
 	}
 	

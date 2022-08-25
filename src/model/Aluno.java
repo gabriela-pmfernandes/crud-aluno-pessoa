@@ -42,9 +42,9 @@ public class Aluno extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Aluno [notaFinalCurso=" + notaFinalCurso + ", data=" + data + ", nome=" + nome + ", telefone="
-				+ telefone + ", diaNascimento=" + diaNascimento + ", mesNascimento=" + mesNascimento
-				+ ", anoNascimento=" + anoNascimento + "]";
+		return "Aluno [Id: " + this.getId() + " Nome: " + this.getNome() + " Telefone: " + this.getTelefone() + " Data de Nascimento: " 
+				+this.getDiaNascimento() + "/" + this.getMesNascimento() + "/" + this.getAnoNascimento() 
+				+ " Nota Final do Curso: " + this.getNotaFinalCurso() + " Data de cadastro: " + this.getData() +"]";
 	}
 	
 	

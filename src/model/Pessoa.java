@@ -8,12 +8,12 @@ public class Pessoa {
 	protected Integer id;
 	protected String nome;
 	protected String telefone;
-	protected int diaNascimento;
-	protected int mesNascimento;
-	protected int anoNascimento;
+	protected Integer diaNascimento;
+	protected Integer mesNascimento;
+	protected Integer anoNascimento;
 	private LocalDate data;
 	
-	public Pessoa(String nome, String telefone, int diaNascimento, int mesNascimento, int anoNascimento) {
+	public Pessoa(String nome, String telefone, Integer diaNascimento, Integer mesNascimento, Integer anoNascimento) {
 		this.id = Contador.proximoId();
 		this.nome = nome;
 		this.telefone = telefone;
