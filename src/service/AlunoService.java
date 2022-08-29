@@ -68,7 +68,4 @@ public class AlunoService {
 		}	
 		alunos.remove(referencia);
 	}
-	
-	
-	
 }

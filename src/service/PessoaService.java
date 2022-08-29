@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Pessoa;
+import util.Menu;
 import util.NormalizaData;
 
 public class PessoaService {
@@ -38,7 +39,6 @@ public class PessoaService {
 		
 		pessoas.add(pessoa);
 	}
-	
 	public void mostrarTodos() {
 		System.out.println("************ PESSOAS CADASTRADAS ************");
 		for(int i = 0; i < pessoas.size(); i++) {

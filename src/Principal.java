@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 
+import model.Pessoa;
 import service.AlunoService;
 import service.PessoaService;
 import util.Menu;
@@ -26,14 +27,14 @@ public class Principal {
 					Menu.cadastroPessoa();
 				}else if(opcaoEscolhidaPessoa == 3) {
 					entrada.nextLine();
-					System.out.println("Escolha o número de referência do aluno que vocêquer atualizar: ");
+					System.out.println("Escolha o número de referência da pessoa que você quer atualizar: ");
 					pessoaService.mostrarTodos();
 					int referenciaPessoaEscolhida = entrada.nextInt();
 					pessoaService.atualizarPessoa(referenciaPessoaEscolhida);
 					Menu.cadastroPessoa();
 				}else if(opcaoEscolhidaPessoa == 4) {
 					entrada.nextLine();
-					System.out.println("Escolha o número de referência do aluno que você quer excluir os dados: ");
+					System.out.println("Escolha o número de referência da pessoa que você quer excluir os dados: ");
 					pessoaService.mostrarTodos();
 					int referenciaPessoaExcluir = entrada.nextInt();
 					pessoaService.excluirDadosPessoa(referenciaPessoaExcluir);
@@ -42,9 +43,8 @@ public class Principal {
 						continua = false;
 				}
 			}else{
-				boolean continuaCadastro = true;
 				Menu.cadastroAluno();
-					do {
+				do {
 					int opcaoEscolhidaAluno = entrada.nextInt();
 					if(opcaoEscolhidaAluno == 1) {
 						alunoService.cadastrarAluno();
@@ -67,12 +67,13 @@ public class Principal {
 						alunoService.excluirDadosAluno(referenciaAlunoExcluir);
 						Menu.cadastroAluno();
 					}else if(opcaoEscolhidaAluno == 0) {
-						continuaCadastro = false;
+						continua = false;
 					}
-				}while(continuaCadastro);
+				}while(continua);
 			}	
 			
 		}while(continua);
 		alunoService.mostrarTodos();
+		pessoaService.mostrarTodos();
 	}
 }

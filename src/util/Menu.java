@@ -2,6 +2,8 @@ package util;
 
 import java.util.Scanner;
 
+import model.Pessoa;
+
 public class Menu {
 	public static void bemVindo(){
 		System.out.println("*********************************");
@@ -15,7 +17,6 @@ public class Menu {
 		System.out.println("Se não, digite não");
 		System.out.println("0 - Sair do sistema");
 	}
-	
 	
 	public static void cadastroPessoa() {
 		System.out.println();
