@@ -49,22 +49,22 @@ public class AlunoService {
 	
 	public void mostrarTodos() {
 		System.out.println("************ ALUNOS CADASTRADOS ************");
-		for(int i = 0; i < alunos.size(); i++) {
-			Aluno listaAluno = alunos.get(i);
-			System.out.println("Referência: " + "["+ i + "] " + listaAluno);	
+		for(int listaDeAlunos = 0; listaDeAlunos < alunos.size(); listaDeAlunos++) {
+			Aluno listaAluno = alunos.get(listaDeAlunos);
+			System.out.println("Referência: " + "["+ listaDeAlunos + "] " + listaAluno);	
 		}
 	}
 	
 	public void atualizarAluno(int referencia) {
-		for(int i = 0; i < alunos.size(); i++) {
-			Aluno listaAluno = alunos.get(i);
+		for(int alunoAtualizacao = 0; alunoAtualizacao < alunos.size(); alunoAtualizacao++) {
+			Aluno listaAluno = alunos.get(alunoAtualizacao);
 		}
 		alunos.remove(referencia);
 		cadastrarAluno();
 		System.out.println("Data da última atualização: " + NormalizaData.formata(LocalDateTime.now()));
 	}
 	public void excluirDadosAluno(int referencia) {
-		for(int i = 0; i < alunos.size(); i++) { 
+		for(int alunoExcluir = 0; alunoExcluir < alunos.size(); alunoExcluir++) { 
 		}	
 		alunos.remove(referencia);
 	}

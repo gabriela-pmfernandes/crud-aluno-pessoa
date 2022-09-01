@@ -41,15 +41,15 @@ public class PessoaService {
 	}
 	public void mostrarTodos() {
 		System.out.println("************ PESSOAS CADASTRADAS ************");
-		for(int i = 0; i < pessoas.size(); i++) {
-			Pessoa listaPessoa = pessoas.get(i);
-			System.out.println("Referência: " + "[" + i + "] " + listaPessoa);
+		for(int listaDePessoas = 0; listaDePessoas < pessoas.size(); listaDePessoas++) {
+			Pessoa listaPessoa = pessoas.get(listaDePessoas);
+			System.out.println("Referência: " + "[" + listaDePessoas + "] " + listaPessoa);
 		}
 	}
 	
 	public void atualizarPessoa(int referencia) {
-		for(int i = 0; i < pessoas.size(); i++) {
-			Pessoa listaPessoa = pessoas.get(i);
+		for(int pessoaAtualizacao = 0; pessoaAtualizacao < pessoas.size(); pessoaAtualizacao++) {
+			Pessoa listaPessoa = pessoas.get(pessoaAtualizacao);
 		}
 		pessoas.remove(referencia);
 		cadastrarPessoa();
@@ -57,7 +57,7 @@ public class PessoaService {
 	}
 	
 	public void excluirDadosPessoa(int referencia) {
-		for(int i = 0; i < pessoas.size(); i++) {	
+		for(int pessoaExcluir = 0; pessoaExcluir < pessoas.size(); pessoaExcluir++) {	
 		}
 		pessoas.remove(referencia);
 	}
