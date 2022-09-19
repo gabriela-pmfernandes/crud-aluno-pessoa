@@ -30,7 +30,8 @@ public class PessoaService {
 		System.out.println("Digite o ano de nascimento da pessoa: ");
 		int anoNascimento = entrada.nextInt();
 		Pessoa pessoa = new Pessoa(nome, telefone, diaNascimento, mesNascimento, anoNascimento);
-		pessoa.getId();pessoa.getNome();
+		pessoa.getId();
+		pessoa.getNome();
 		pessoa.getTelefone();
 		pessoa.getDiaNascimento();
 		pessoa.getMesNascimento();

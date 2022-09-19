@@ -16,7 +16,10 @@ public class Principal {
 			Menu.bemVindo();
 			Menu.selecionar();
 			String verificacao = entrada.next();
-			if(verificacao.equals("não")) {
+			verificacao = verificacao.toLowerCase();
+			verificacao = verificacao.replace("ã", "a");
+			System.out.println(verificacao);
+			if(verificacao.equals("não")|| verificacao.equals("n")|| verificacao.equals("nao") || verificacao.equals("NÃO") || verificacao.equals("NAO")) {
 				Menu.cadastroPessoa();
 				int opcaoEscolhidaPessoa = entrada.nextInt();
 				if(opcaoEscolhidaPessoa == 1) {
