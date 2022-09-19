@@ -18,7 +18,6 @@ public class Principal {
 			String verificacao = entrada.next();
 			verificacao = verificacao.toLowerCase();
 			verificacao = verificacao.replace("ã", "a");
-			System.out.println(verificacao);
 			if(verificacao.equals("n")|| verificacao.equals("nao") || verificacao.equals("NÃO") || verificacao.equals("NAO")) {
 				Menu.cadastroPessoa();
 				int opcaoEscolhidaPessoa = entrada.nextInt();
